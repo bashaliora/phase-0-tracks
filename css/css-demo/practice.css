@@ -8,8 +8,18 @@
 	padding: 5px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	border: 1px dotted black;
 }
 
 .list {
 	font-size: .8em;
 }
+
+section:hover {
+	text-decoration: underline;
+}
+
+
+li:first-child {
+  color: #71c290;
+} 
