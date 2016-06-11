@@ -1,5 +1,5 @@
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 blockquote {
@@ -21,16 +21,18 @@ cite {
 #external-links {
   display: inline-block;
   vertical-align: top;
-  width: 200px;
+  width: 20%;
   position: fixed;
+  padding-right: 10px;
 }
 
 main {
-  width: 756px;
+  min-width: 80%;
   display: inline-block;
   vertical-align: top;
   position: relative;
   margin-left: 20%;
+  padding-left: 20px;
 }
 
 /* you're welcome to edit the
