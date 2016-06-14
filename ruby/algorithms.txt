@@ -1,0 +1,40 @@
+
+Robot && Elevator Algorithm
+
+
+- Navigate to elevator
+- If destination floor is greater than current floor:
+	- Press up button to open door
+- Otherwise:
+	- Press down button to open door
+- If elevator door opens:
+		- Move forward into elevator
+ 	- Otherwise:
+ 		- Wait for elevator
+ - If leaving home for errand:
+ 	- Press G button
+ 	- Wait for elevator to descend and door to open
+ 	- Exit elevator
+ 	- Proceed to bread store
+- Otherwise:
+ 	- Press N button
+ 	- Wait for elevator to ascend and door to open
+ 	- Exit elevator and return home
+ 	- Put away the bread
+
+
+
+ Going To Sleep Algorithm
+
+ - Put on pajamas
+ - Enter the bedroom
+ - If tired:
+ 	- Climb into bed
+ 	- Smush pillows until comfortable
+ - Until sleeping:
+ 	- Read a book
+ 	- Roll around forever
+ - Otherwise:
+  - Fall asleep without setting your alarm
+
+
