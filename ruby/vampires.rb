@@ -27,7 +27,7 @@ if age == 2016 - birth_year && (likes_garlic == true || health_insurance == true
 	puts "Probably not a vampire"
 elsif age != 2016 - birth_year && (likes_garlic == false || health_insurace == false)
 	puts "Probably a vampire"
-elsif age /= 2016 - birth_year && likes_garlic == false && health_insurance == false	
+elsif age != 2016 - birth_year && likes_garlic == false && health_insurance == false
 	puts = "Almost certainly a vampire"
 elsif name == "Drake Cula" || "Tu Fang"
 	puts = "Definitely a vampire"
