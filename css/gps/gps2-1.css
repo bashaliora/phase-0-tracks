@@ -1,8 +1,8 @@
 body {
   max-width: 960px;
   background-image: url(http://images.mentalfloss.com/sites/default/files/styles/insert_main_wide_image/public/istock_000078603065_small.jpg);
+  background-repeat: no-repeat;
   color: white;
-  font-family: helvetica;
 }
 
 header {
