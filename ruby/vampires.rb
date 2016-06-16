@@ -1,5 +1,5 @@
 def to_boolean(string)
-	if string == "false" || string == "False" || string == "no" || string == "No"
+	if string == "false" || string == "no"
 		return false
 	else
 		return true
@@ -7,7 +7,7 @@ def to_boolean(string)
 end			
 
 
-puts "What is your name?"
+puts "What\'s your name?"
 name = gets.chomp
 
 puts "How old are you?"
@@ -17,22 +17,30 @@ puts "In what year were you born?"
 birth_year = gets.chomp.to_i
 
 puts "Would you like garlic bread for lunch?"
-likes_garlic = to_boolean(gets.chomp)
+likes_garlic = to_boolean(gets.chomp.downcase)
 
 puts "Would you like to enroll in our health insurance plan?"
-health_insurance = to_boolean(gets.chomp)
+health_insurance = to_boolean(gets.chomp.downcase)
 
 
-if age == 2016 - birth_year && (likes_garlic == true || health_insurance == true)
-	puts "Probably not a vampire"
-elsif age != 2016 - birth_year && (likes_garlic == false || health_insurace == false)
-	puts "Probably a vampire"
-elsif age != 2016 - birth_year && likes_garlic == false && health_insurance == false
-	puts = "Almost certainly a vampire"
-elsif name == "Drake Cula" || "Tu Fang"
-	puts = "Definitely a vampire"
-else
-	puts = "Results inconclusive."
+if name == "Drake Cula" || name == "Tu Fang"
+	puts "Definitely a vampire"
+else	
+	if age == 2016 - birth_year && (likes_garlic == true && health_insurance == true)
+		puts "Probably not a vampire"
+	end	
+	if age != 2016 - birth_year && (likes_garlic == false || health_insurance == false)
+	 	# puts "Probably a vampire"
+		if likes_garlic == false && health_insurance == false
+			if age != 2016 - birth_year && likes_garlic == false && health_insurance == false
+				puts "Almost certainly a vampire"
+			else
+				puts "Results inconclusive."
+			end
+		else
+			puts "Probably a vampire."
+		end		
+	end
 end
 
-#figure out how to verify age
+
