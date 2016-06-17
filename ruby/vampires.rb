@@ -57,7 +57,11 @@ if (name == "Drake Cula" || name == "Tu Fang")
 		are_they_a_vampire = "Definitely a vampire"
 end
 	
-puts are_they_a_vampire
-
 employees_to_log = employees_to_log -= 1
+
+puts are_they_a_vampire
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
+
