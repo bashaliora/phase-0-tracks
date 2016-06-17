@@ -25,14 +25,29 @@ while employees_to_log > 0
 	puts "Would you like to enroll in our health insurance plan?"
 	health_insurance = to_boolean(gets.chomp.downcase)
 
-
 are_they_a_vampire = "Results inconclusive."
+
+ all_allergies = 5
+ 	until all_allergies == 0 do
+ 				all_allergies = all_allergies -= 1
+ 		puts "Please list any allergies one at a time. Enter \'done\' when you are finished."
+ 		allergies = gets.chomp
+ 			if allergies == "done"
+ 				puts "Thank you."
+ 				break
+ 			end	
+ 			if allergies == "sunshine"
+				break
+			end
+ 	end	
+	
+
 
 
 if (age == 2016 - birth_year) && (likes_garlic == true || health_insurance == true)
 	are_they_a_vampire = "Probably not a vampire"
 end
-if (age != 2016 - birth_year) && (likes_garlic == false || health_insurance == false)
+if (age != 2016 - birth_year) && (likes_garlic == false || health_insurance == false) || (allergies == "sunshine")
 	are_they_a_vampire = "Probably a vampire"
 end
 if (age != 2016 - birth_year) && likes_garlic == false && health_insurance == false
@@ -44,5 +59,5 @@ end
 	
 puts are_they_a_vampire
 
-employees_to_log = employees_to_log - 1
+employees_to_log = employees_to_log -= 1
 end
