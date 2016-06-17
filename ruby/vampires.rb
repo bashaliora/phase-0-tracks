@@ -6,8 +6,10 @@ def to_boolean(string)
 	end
 end			
 
+puts "How many employees are you going to be logging?"
+employees_to_log = gets.chomp.to_i
 
-#while employees_to_log > 0
+while employees_to_log > 0
 	puts 'What\'s your name?'
 	name = gets.chomp
 	
@@ -40,6 +42,7 @@ if (name == "Drake Cula" || name == "Tu Fang")
 		are_they_a_vampire = "Definitely a vampire"
 end
 	
-
 puts are_they_a_vampire
 
+employees_to_log = employees_to_log - 1
+end
