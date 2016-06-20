@@ -85,5 +85,5 @@ if d_or_e == "e"
 	puts encrypt(password)
 end
 
-
+puts "Thank you. Goodbye!"
 	
