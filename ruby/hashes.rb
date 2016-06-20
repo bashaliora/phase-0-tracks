@@ -10,6 +10,7 @@
 
 # ask for client name, take designer input and assign as value to a key in hash
 
+
 def to_boolean(string)
 	if string == "yes".downcase
 		return true
@@ -41,4 +42,5 @@ puts "Would the client like wood floors? Yes/No"
 wood_floors = to_boolean(gets.chomp)
 
 
+#pick up here tomorrow -- how to take data and create hash
 
