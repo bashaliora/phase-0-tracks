@@ -37,3 +37,11 @@
 
  "How many times does the letter 'a' appear in this string?".count "a"
  # => 4
+
+
+
+ p "sandwiches".swapcase
+ p "poptarts".center(15)
+ p "I'm hungry if you haven't noticed".chop
+ p "r".ord
+ p "Get me a pizza pleaseeeeeeeeee!".count "e"
