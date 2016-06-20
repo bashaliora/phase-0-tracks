@@ -86,4 +86,7 @@ if d_or_e == "e"
 end
 
 puts "Thank you. Goodbye!"
+
+#Encrypting and decrypting the first three letters of "swordfish" works because the methods take out the first three letters from the word, shift them to the next letter and then back again.
+#p decrypt(encrypt("swordfish"))
 	
