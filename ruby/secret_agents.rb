@@ -67,3 +67,23 @@ def decrypt(password)
 	decrypted_password = decr_letter_1 + decr_letter_2 + decr_letter_3 
 
 end
+
+#DRIVER CODE
+
+puts "Would you like to decrypt or encrypt a password? (type (d or e))?"
+d_or_e = gets.chomp
+
+if d_or_e == "d"
+	puts "Please enter 3 letter password."
+	password = gets.chomp
+	puts decrypt(password)
+end
+
+if d_or_e == "e"
+	puts "Please enter 3 letter password."
+	password = gets.chomp
+	puts encrypt(password)
+end
+
+
+	
