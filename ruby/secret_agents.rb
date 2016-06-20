@@ -45,3 +45,25 @@ index = 0
 3- subtract that number by one (0)
 4- redefine variable to this "number minus one"
 =end
+
+def decrypt(password)
+	
+	index = 0
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+	num_first_1 = alphabet.index(password[0])
+	num_second_1 = num_first_1 - 1
+	decr_letter_1 = alphabet[num_second_1]
+
+	num_first_2 = alphabet.index(password[1])
+	num_second_2 = num_first_2 - 1
+	decr_letter_2 = alphabet[num_second_2]
+
+	num_first_3 = alphabet.index(password[2])
+	num_second_3 = num_first_3 - 1
+	decr_letter_3 = alphabet[num_second_3]
+
+
+	decrypted_password = decr_letter_1 + decr_letter_2 + decr_letter_3 
+
+end
