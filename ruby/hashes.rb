@@ -49,7 +49,7 @@ p client_design
 #ask user for the updated information and update the value for that key
 #if user enters none, exit
 
-puts "If you need to change any of the information, enter the category you need to change, for example, \'Decor Theme\'. If no changes are needed, enter \'none\'."
+puts "If you need to change any of the information, enter the category you need to change, for example, \'decor_theme\'. If no changes are needed, enter \'none\'."
 update_input = gets.chomp
 
 	if update_input == "none".downcase
@@ -57,11 +57,11 @@ update_input = gets.chomp
 	else 
 		puts "Enter the new information for #{update_input}"
 		new_value = gets.chomp
-		client_design["#{update_input}.to_sym"] = "#{new_value}"
+		client_design["#{update_input}".to_sym] = "#{new_value}"
 	end
 
 p client_design
-end
+
 
 
 
