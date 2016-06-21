@@ -87,9 +87,9 @@ comic_book_room = { #hash named comic_book_room
  }
  
 
-comic_book_room[:box_a][:animal_man][:actual_title]
-comic_book_room[:box_b][:batman][:actual_title].reverse
-comic_book_room[:box_b][:bitch_planet][:issues_owned][:total_issues]
-comic_book_room[:box_b][:batman][:volumes][0]
-comic_book_room[:box_b][:batman][:volumes]
+p comic_book_room[:box_a][:animal_man][:actual_title]
+p comic_book_room[:box_b][:batman][:actual_title].reverse
+p comic_book_room[:box_b][:bitch_planet][:issues_owned][:total_issues]
+p comic_book_room[:box_b][:batman][:volumes][0]
+p comic_book_room[:box_b][:batman][:volumes]
  
