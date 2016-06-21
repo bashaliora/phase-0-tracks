@@ -20,11 +20,11 @@ def to_boolean(string)
 end
 
 
-puts "Please enter new client\'s first name"
-first_name = gets.chomp
+client_design = { }
 
-puts "Please enter new client\'s last name"
-last_name = gets.chomp
+
+puts "Please enter new client\'s name"
+client_name = gets.chomp
 
 puts "Age of client"
 client_age = gets.chomp.to_i
@@ -41,6 +41,7 @@ decor_theme = gets.chomp
 puts "Would the client like wood floors? Yes/No"
 wood_floors = to_boolean(gets.chomp)
 
+client_design = {:client_name => client_name, :client_age => client_age, :number_of_children => number_of_children, :favorite_color => favorite_color, :decor_theme => decor_theme, :wood_floors => wood_floors}
+p client_design
 
-#pick up here tomorrow -- how to take data and create hash
 
