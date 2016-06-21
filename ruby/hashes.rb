@@ -44,4 +44,23 @@ wood_floors = to_boolean(gets.chomp)
 client_design = {:client_name => client_name, :client_age => client_age, :number_of_children => number_of_children, :favorite_color => favorite_color, :decor_theme => decor_theme, :wood_floors => wood_floors}
 p client_design
 
+#ask user if they need to change any information
+#take user input and turn it into a symbol that matches hash key
+#ask user for the updated information and update the value for that key
+#if user enters none, exit
+
+puts "If you need to change any of the information, enter the category you need to change, for example, \'Decor Theme\'. If no changes are needed, enter \'none\'."
+update_input = gets.chomp
+
+	if update_input == "none".downcase
+		puts "Thank you!"		
+	else 
+		puts "Enter the new information for #{update_input}"
+		new_value = gets.chomp
+		client_design["#{update_input}.to_sym"] = "#{new_value}"
+	end
+		
+
+
+
 
