@@ -84,3 +84,5 @@ comic_book_room = { #hash named comic_book_room
 
  p comic_book_room
 
+
+#pick up tomorrow with why you're getting an unexpected identifier error message
