@@ -59,7 +59,11 @@ update_input = gets.chomp
 		new_value = gets.chomp
 		client_design["#{update_input}.to_sym"] = "#{new_value}"
 	end
-		
+
+p client_design
+end
+
+
 
 
 
