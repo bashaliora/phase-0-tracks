@@ -74,3 +74,15 @@ puts "After each call:"
 p favorite_animals	
 
 
+
+numbers = [1, 2, 3, 4, 5, 6]
+puts "Original data:"
+p numbers
+
+numbers.delete_if { |number| number < 6 }
+
+puts "After delete_if call:"
+p numbers
+
+
+
