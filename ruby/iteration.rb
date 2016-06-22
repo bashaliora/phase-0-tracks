@@ -13,13 +13,21 @@ puts "Original data:"
 p animals_in_zoo
 
 index = 0
-animals_in_zoo.each do |cage_number|
-	puts cage_number
+animals_in_zoo.each do |animal|
+	puts "This #{animal} is my favorite animal!"
 end	
 
 
 puts "After .each call:"
-p cage_number
+p animals_in_zoo
+
+
+more_animals_in_zoo = [
+	'bat',
+	'snake',
+	'polar bear',
+	'ocelot'
+]
 
 
 
