@@ -12,7 +12,6 @@ animals_in_zoo = [
 puts "Original data:"
 p animals_in_zoo
 
-index = 0
 animals_in_zoo.each do |animal|
 	puts "This #{animal} is my favorite animal!"
 end	
@@ -22,12 +21,33 @@ puts "After .each call:"
 p animals_in_zoo
 
 
-more_animals_in_zoo = [
-	'bat',
-	'snake',
-	'polar bear',
-	'ocelot'
+
+countries_to_visit = [
+	'Ireland',
+	'Amsterdam',
+	'Italy',
+	'Japan'
 ]
+
+
+favorite_letter = [
+	'L',
+	'M',
+	'A',
+	'E'
+]
+
+puts "Original Data:"
+p favorite_letter
+
+
+favorite_letter.map! do |new_letter|
+	new_letter.next
+end
+
+
+puts "After dangerous map call:"
+p favorite_letter
 
 
 
