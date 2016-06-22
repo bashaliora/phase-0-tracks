@@ -51,12 +51,26 @@ p favorite_letter
 
 
 
-# favorite_animals = {
-# 	:liz => 'owl', 
-# 	:michael => 'gorilla', 
-# 	:aidan => 'penguin', 
-# 	:landon => 'lemur'
-# }
+#each call on a hash
 
+
+favorite_animals = {
+	:liz => 'owl', 
+	:michael => 'gorilla', 
+	:aidan => 'penguin', 
+	:landon => 'lemur'
+}
+
+puts "Original data:"
+p favorite_animals
+
+
+favorite_animals.each do |family_member, favorite_animal|
+	puts "#{family_member}\'s favorite animal is a #{favorite_animal}!"
+end
+
+
+puts "After each call:"
+p favorite_animals	
 
 
