@@ -86,3 +86,31 @@ p numbers
 
 
 
+
+old_points = {
+	"first" => 200,
+	"second" => 150,
+	"third" => 400
+}
+
+new_points = {
+	"first" => 250,
+	"second" => 40,
+	"third" => 600
+}
+
+puts "Original data:"
+p old_points
+p new_points
+
+
+old_points.merge!(new_points) {| place, old_score, new_score | new_score + old_score}
+
+
+puts "After dangerous merge call:"
+p old_points
+
+
+
+
+
