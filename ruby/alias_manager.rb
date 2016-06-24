@@ -12,7 +12,7 @@
 
 
 puts "Hello Agent, please enter your true name."
-agent_name = gets.chomp
+true_name = gets.chomp
 
 
 #take agent name and separate into characters
@@ -23,52 +23,71 @@ agent_name = gets.chomp
 #join arrays, convert to string
 #reverse name
 
-separated_name = agent_name.split('')
+
+separated_name = true_name.downcase.split('')
 p separated_name
 
-vowels = [
-	'a',
-	'e',
-	'i',
-	'o',
-	'u'
-]
+
+# vowels = [
+# 	'a',
+# 	'e',
+# 	'i',
+# 	'o',
+# 	'u'
+# ]
 
 
-def next_vowel(vowels)
-	if vowels == "a"
-		return "e"
-	elsif vowels == "e"
-		return "i"
-	elsif vowels == "i"
-		return "o"
-	elsif vowels == "o"
-		return "u"
-	elsif vowels == "u"
-		return "a"
+def next_vowel(separated_name)
+vowels = separated_name.grep ( /aeiou/ )
+p vowels
+
+
+vowels.map! do |vowel| 
+	next_vowel = next_vowel(vowel)
+	starting_vowel = ' '
+	next_vowel = ' '
+
+		if starting_vowel == "a"
+			next_vowel = "e"
+		end	
+		if starting_vowel == "e"
+			next_vowel = "i"
+		end	
+		if starting_vowel == "i"
+			next_vowel = "o"
+		end	
+		if starting_vowel == "o"
+			next_vowel = "u"
+		end	
+		if starting_vowel == "u"
+			next_vowel = "a"
+		end	
 	end	
-end	
 
-p next_vowel('a')
-p next_vowel('e')
-p next_vowel('i')
-p next_vowel('o')
-p next_vowel('u')
+end
+
+p next_vowel(separated_name)
 
 
-
+consonants = []
 consonants = separated_name - vowels
 p consonants
+
+
+
+
+
+# p next_vowel('a')
+# p next_vowel('e')
+# p next_vowel('i')
+# p next_vowel('o')
+# p next_vowel('u')
+
 
 
 consonants.map! do |letter|
 	letter.next
 end
-
-
-
-
-
 
 p consonants
 
