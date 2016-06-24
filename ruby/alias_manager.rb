@@ -8,7 +8,7 @@
 # How will you deal with the fact that some letters are uppercase?
 # How will you handle edge cases?
 
-#liz keys should become lizt moa
+#liz keys should become lizt mob
 
 
 puts "Hello Agent, please enter your true name."
