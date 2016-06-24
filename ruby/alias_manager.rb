@@ -8,88 +8,62 @@
 # How will you deal with the fact that some letters are uppercase?
 # How will you handle edge cases?
 
-#liz keys should become moa lizt
+#liz keys should become lizt moa
 
 
 puts "Hello Agent, please enter your true name."
-true_name = gets.chomp
+true_name = gets.chomp.downcase
 
 
-#take agent name and separate into characters
-#if vowel, remove from array and move to new array
-#move vowel array to new letter
-#if consonant, move to new letter
-#merge arrays
-#join arrays, convert to string
-#reverse name
+# take agent name assert index
+# write a method that moves vowels to next vowel
+# consonants to next consonant
+# iterate over each letter
+# reverse name
+
+# agent_name = true_name.split(' ')
+# p agent_name
+
+# agent_name_reversed = agent_name.reverse
+# p agent_name_reversed
 
 
-separated_name = true_name.downcase.split('')
-p separated_name
+def next_letter(true_name)
+	result = " "
+	character_count = true_name.length
+	
+	character_count.times do |index|
+	current_letter = true_name[index]
 
-
-# vowels = [
-# 	'a',
-# 	'e',
-# 	'i',
-# 	'o',
-# 	'u'
-# ]
-
-
-def next_vowel(separated_name)
-vowels = separated_name.grep ( /aeiou/ )
-p vowels
-
-
-vowels.map! do |vowel| 
-	next_vowel = next_vowel(vowel)
-	starting_vowel = ' '
-	next_vowel = ' '
-
-		if starting_vowel == "a"
-			next_vowel = "e"
+		if current_letter == "a"
+			next_letter = "e"
+		elsif current_letter == "e"
+			next_letter = "i"
+		elsif current_letter == "i"
+			next_letter = "o"
+		elsif current_letter == "o"
+			next_letter = "u"
+		elsif current_letter == "u"
+			next_letter = "a"
+		elsif current_letter == " "
+			next_letter = " "
+		elsif current_letter == "z"
+			next_letter = "a"
+		else
+			next_letter = current_letter.next!
 		end	
-		if starting_vowel == "e"
-			next_vowel = "i"
-		end	
-		if starting_vowel == "i"
-			next_vowel = "o"
-		end	
-		if starting_vowel == "o"
-			next_vowel = "u"
-		end	
-		if starting_vowel == "u"
-			next_vowel = "a"
-		end	
+		
+	result += next_letter
+	
 	end	
+	
+	result
 
 end
 
-p next_vowel(separated_name)
 
 
-consonants = []
-consonants = separated_name - vowels
-p consonants
-
-
-
-
-
-# p next_vowel('a')
-# p next_vowel('e')
-# p next_vowel('i')
-# p next_vowel('o')
-# p next_vowel('u')
-
-
-
-consonants.map! do |letter|
-	letter.next
-end
-
-p consonants
+next_letter(true_name)
 
 
 
