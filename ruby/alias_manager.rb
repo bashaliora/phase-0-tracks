@@ -63,7 +63,9 @@ end
 
 
 
-next_letter(true_name)
+agent_name = next_letter(true_name).strip
+reversed_agent_name = agent_name.split(' ').reverse.join(' ')
+p reversed_agent_name
 
 
 
