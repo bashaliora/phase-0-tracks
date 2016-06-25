@@ -1,10 +1,14 @@
 
 
-#liz keys should become lizt mob
+#liz keys should become Lizt Mob
 
-# create user interface that allows user to keep entering true name and returning reversed agent name
-# enter quit to exit program
-# hit enter to continue
+# take agent name assert index
+# split name, reverse name, join name
+# write a method that moves vowels to next vowel
+# consonants to next consonant
+# z > a
+# skip over spaces, so space entry remains space
+
 
 def agent_name_maker
 	agent_names = {}
@@ -19,22 +23,6 @@ def agent_name_maker
 		full_name.join(' ')
 	end	
 
-
-
-	
-
-
-# take agent name assert index
-# write a method that moves vowels to next vowel
-# consonants to next consonant
-# iterate over each letter
-# reverse name
-
-# agent_name = true_name.split(' ')
-# p agent_name
-
-# agent_name_reversed = agent_name.reverse
-# p agent_name_reversed
 
 
 		def next_letter(true_name)
@@ -70,6 +58,11 @@ def agent_name_maker
 
 	end
 
+
+
+# create user interface that allows user to keep entering true name and returning reversed agent name
+# enter quit to exit program
+# hit enter to continue
 
 puts "Hello Agent, please enter your true name."
 true_name = gets.chomp.downcase
