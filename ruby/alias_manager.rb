@@ -10,20 +10,19 @@
 # skip over spaces, so space entry remains space
 
 
-puts "Hello Agent, please enter your true name."
-true_name = gets.chomp.downcase
+
+
 
 def agent_name_maker
-	agent_names = {}
+	agent_aliases = {}
 
 	def reverse_name(true_name)
-		puts true_name
 		first_and_last = true_name.split(' ')
-		first_name = full_name[0]
-		last_name = full_name[-1]
-		full_name[0] = last_name
-		full_name[-1] = first_name
-		full_name.join(' ')
+		first_name = first_and_last[0]
+		last_name = first_and_last[-1]
+		first_and_last[0] = last_name
+		first_and_last[-1] = first_name
+		first_and_last.join(' ')
 	end	
 
 
@@ -32,11 +31,11 @@ def agent_name_maker
 			vowels = 'aeiou'
 			
 
-		index = 0
-		while index < true_name.length
+		i = 0
+		while i < true_name.length
 
-			if vowels.include?(true_name[index])
-				index = vowels.index(true_name[index])
+			if vowels.include?(true_name[i])
+				index = vowels.index(true_name[i])
 
 				if index == 4
 					next_v = vowels[0]
@@ -44,17 +43,17 @@ def agent_name_maker
 					next_v = vowels[index + 1]
 				end
 				
-				true_name[index] = next_v
+				true_name[i] = next_v
 			else
-				if true_name[index] == 'z'
-					true_name[index] == 'a'
+				if true_name[i] == 'z'
+					true_name[i] = 'a'
 				elsif
-					true_name[index] != ' '
-					true_name[index] = true_name[index].next
+					true_name[i] != ' '
+					true_name[i] = true_name[i].next
 				end
 			end
 			
-			index += 1
+			i += 1
 		end			
 
 	true_name
@@ -62,15 +61,41 @@ def agent_name_maker
 	end
 
 
-
-
-
-
-
-
 # create user interface that allows user to keep entering true name and returning reversed agent name
-# enter quit to exit program
-# hit enter to continue
+# input quit to exit program
+
+
+
+	def all_agent_aliases(agent_aliases)
+		agent_aliases.each do |true_name, key|
+			puts "#{key} is also known as #{true_name}"
+		end
+	end
+
+	finished = false
+	while finished == false
+		puts "Hello agent, please enter your true name or enter \'quit\' to exit."
+		true_name = gets.chomp
+		key = true_name	
+		if true_name == 'quit' || true_name == ''
+			finished = true
+			all_agent_aliases(agent_aliases)
+			break
+		else
+			true_name = reverse_name(true_name)
+			true_name = next_vowel(true_name)
+			puts true_name
+			puts "Thank you."
+			agent_aliases[key.to_sym] = true_name
+		end
+	end
+end
+
+agent_name_maker					
+
+
+
+
 
 
 
