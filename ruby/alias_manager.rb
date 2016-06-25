@@ -6,10 +6,21 @@
 # enter quit to exit program
 # hit enter to continue
 
+def agent_name_maker
+	agent_names = {}
+
+	def reverse_name(true_name)
+		puts true_name
+		first_and_last = true_name.split(' ')
+		first_name = full_name[0]
+		last_name = full_name[-1]
+		full_name[0] = last_name
+		full_name[-1] = first_name
+		full_name.join(' ')
+	end	
 
 
-puts "Hello Agent, please enter your true name."
-true_name = gets.chomp.downcase
+
 	
 
 
@@ -60,10 +71,9 @@ true_name = gets.chomp.downcase
 	end
 
 
+puts "Hello Agent, please enter your true name."
+true_name = gets.chomp.downcase
 
-agent_name = next_letter(true_name).strip
-reversed_agent_name = agent_name.split(' ').reverse.join(' ')
-p reversed_agent_name
 
 	end
 
