@@ -10,6 +10,9 @@
 # skip over spaces, so space entry remains space
 
 
+puts "Hello Agent, please enter your true name."
+true_name = gets.chomp.downcase
+
 def agent_name_maker
 	agent_names = {}
 
@@ -25,38 +28,43 @@ def agent_name_maker
 
 
 
-		def next_letter(true_name)
-			result = " "
-			character_count = true_name.length
+	def next_vowel(true_name)
+			vowels = 'aeiou'
+			
 
-			character_count.times do |index|
-			current_letter = true_name[index]
+		index = 0
+		while index < true_name.length
 
-			if current_letter == "a"
-				next_letter = "e"
-			elsif current_letter == "e"
-				next_letter = "i"
-			elsif current_letter == "i"
-				next_letter = "o"
-			elsif current_letter == "o"
-				next_letter = "u"
-			elsif current_letter == "u"
-				next_letter = "a"
-			elsif current_letter == " "
-				next_letter = " "
-			elsif current_letter == "z"
-				next_letter = "a"
+			if vowels.include?(true_name[index])
+				index = vowels.index(true_name[index])
+
+				if index == 4
+					next_v = vowels[0]
+				else
+					next_v = vowels[index + 1]
+				end
+				
+				true_name[index] = next_v
 			else
-				next_letter = current_letter.next!
-			end	
+				if true_name[index] == 'z'
+					true_name[index] == 'a'
+				elsif
+					true_name[index] != ' '
+					true_name[index] = true_name[index].next
+				end
+			end
+			
+			index += 1
+		end			
 
-			result += next_letter
-
-		end	
-
-	result
-
+	true_name
+	
 	end
+
+
+
+
+
 
 
 
@@ -64,11 +72,9 @@ def agent_name_maker
 # enter quit to exit program
 # hit enter to continue
 
-puts "Hello Agent, please enter your true name."
-true_name = gets.chomp.downcase
 
 
-	end
+
 
 
 
