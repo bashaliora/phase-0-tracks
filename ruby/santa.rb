@@ -40,6 +40,10 @@ class Santa
   	puts "I'm mad at reindeer ##{number_of_reindeer}, so my favorite reindeer in order are now: #{@reindeer_ranking}"
   end
 
+  def gender=(new_gender)
+  	@gender = new_gender
+  end	
+
 end 
 
 
@@ -52,6 +56,10 @@ nick.reindeer_ranking
 nick.about(12)
 nick.celebrate_birthday
 nick.get_mad_at(4)
+nick.gender = "none of your business"
+# puts "This santa prefers to now be identified as #{new_gender}"
+p nick.gender
+# tomorrow figure out why you're getting an error  for gender variable/method 
 
 santas = []
 example_genders = ["gender fluid", "transgender", "agender", "female"]
