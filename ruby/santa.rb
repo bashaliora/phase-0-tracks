@@ -18,14 +18,24 @@ class Santa
 	puts "Iinitializing Santa instance..."
   end
 
-  def favorite_reindeer
+  def reindeer_ranking
   	@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", 
   		"Comet", "Cupid", "Donner", "Blitzen"]
+  	puts "My favorite reindeer in order are: #{@reindeer_ranking}"
   end
   
   def about(age)
   	@age = 0
-  end			
+  	puts "Santa is #{@age} years old."
+  end
+
+  def celebrate_birthday
+  	@age = @age + 1
+  	puts "Santa is now #{@age} years old."
+  end
+
+  # def get_mad_at(reindeer)
+
 
 end 
 
@@ -35,8 +45,9 @@ end
 nick = Santa.new("male", "pubjabi")
 nick.speak
 nick.eat_milk_and_cookies("snickerdoodle")
-nick.favorite_reindeer
+nick.reindeer_ranking
 nick.about(12)
+nick.celebrate_birthday
 
 santas = []
 example_genders = ["gender fluid", "transgender", "agender", "female"]
