@@ -34,8 +34,11 @@ class Santa
   	puts "Santa is now #{@age} years old."
   end
 
-  # def get_mad_at(reindeer)
-
+  def get_mad_at(number_of_reindeer)
+  	@reindeer_ranking.index
+  	@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(number_of_reindeer))
+  	puts "I'm mad at reindeer ##{number_of_reindeer}, so my favorite reindeer in order are now: #{@reindeer_ranking}"
+  end
 
 end 
 
@@ -48,6 +51,7 @@ nick.eat_milk_and_cookies("snickerdoodle")
 nick.reindeer_ranking
 nick.about(12)
 nick.celebrate_birthday
+nick.get_mad_at(4)
 
 santas = []
 example_genders = ["gender fluid", "transgender", "agender", "female"]
