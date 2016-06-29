@@ -31,7 +31,7 @@ class Santa
 
   def celebrate_birthday
   	@age = @age + 1
-  	puts "Santa is now #{@age} years old."
+  	puts "Santa had a birthday! They are now #{@age} year(s) old."
   end
 
   def get_mad_at(number_of_reindeer)
@@ -42,7 +42,16 @@ class Santa
 
   def gender=(new_gender)
   	@gender = new_gender
-  end	
+  	puts "This santa would now like to be identified as #{new_gender}"
+  end
+
+  def age
+  	@age
+  end
+  
+  def ethnicity
+  	@ethnicity
+  end		
 
 end 
 
@@ -57,9 +66,9 @@ nick.about(12)
 nick.celebrate_birthday
 nick.get_mad_at(4)
 nick.gender = "none of your business"
-# puts "This santa prefers to now be identified as #{new_gender}"
-p nick.gender
-# tomorrow figure out why you're getting an error  for gender variable/method 
+puts "This santa is #{nick.age} and their ethnicity is #{nick.ethnicity}"
+
+
 
 santas = []
 example_genders = ["gender fluid", "transgender", "agender", "female"]
