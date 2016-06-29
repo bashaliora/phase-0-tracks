@@ -37,3 +37,54 @@ spot.speak(4)
 spot.roll_over
 spot.dog_years(17)
 spot.high_jump(3)
+
+
+# Create a new dancer class
+
+class Dancer
+
+# Include two instance methods for new dancer class
+
+  def spin(number_of_spins)
+  	puts "I span #{number_of_spins} times. I'm super dizzy!"
+  end
+  
+  def splits
+  	puts "splits?! ouch!"
+  end
+  
+end 
+
+
+
+
+# DRIVER CODE
+
+# angelica = Dancer.new
+# angelica.spin(14)
+# angelica.splits
+
+
+
+
+# create 50 instances of dancer using a loop
+# create an empty array for dancers to be placed into
+# store each new instance of Dancers class in the array
+
+dancers = []
+50.times {
+	dancer = Dancer.new
+	dancers << dancer
+}
+
+# call each instance method in the Dancer class on each of the 50 dancers
+
+dancers.each do |dancer|
+	dancer.spin(10)
+	dancer.splits
+end	
+
+
+
+
+
