@@ -1,6 +1,9 @@
 # CREATE A SANTA CLASS
 
 class Santa
+  attr_reader :ethnicity
+  attr_accessor :gender, :about, :age
+
 
 # write instance methods for santa class
 
@@ -12,9 +15,10 @@ class Santa
   	puts "That was a great #{cookie_type}!"
   end
   
-  def initialize(gender, ethnicity)
+  def initialize(gender, ethnicity, age)
   	@gender = gender
   	@ethnicity = ethnicity
+    @age = age
 	puts "Iinitializing Santa instance..."
   end
 
@@ -22,11 +26,6 @@ class Santa
   	@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", 
   		"Comet", "Cupid", "Donner", "Blitzen"]
   	puts "My favorite reindeer in order are: #{@reindeer_ranking}"
-  end
-  
-  def about(age)
-  	@age = 0
-  	puts "Santa is #{@age} years old."
   end
 
   def celebrate_birthday
@@ -43,39 +42,44 @@ class Santa
   def gender=(new_gender)
   	@gender = new_gender
   	puts "This santa would now like to be identified as #{new_gender}"
-  end
-
-  def age
-  	@age
-  end
-  
-  def ethnicity
-  	@ethnicity
   end		
 
 end 
 
 
+
+
 # DRIVER CODE
 
-nick = Santa.new("male", "pubjabi")
-nick.speak
-nick.eat_milk_and_cookies("snickerdoodle")
-nick.reindeer_ranking
-nick.about(12)
-nick.celebrate_birthday
-nick.get_mad_at(4)
-nick.gender = "none of your business"
-puts "This santa is #{nick.age} and their ethnicity is #{nick.ethnicity}"
+santa = Santa.new("male", "pubjabi", 12)
+santa.speak
+santa.eat_milk_and_cookies("snickerdoodle")
+santa.reindeer_ranking
+santa.celebrate_birthday
+santa.get_mad_at(4)
+santa.gender = "none of your business"
+puts "This santa is #{santa.age} and their ethnicity is #{santa.ethnicity}"
 
 
+puts "-------------------------------------------------"
+puts "Here are more santas:"
+puts " "
+puts " "
 
+
+number_of_santas = 150
 santas = []
 example_genders = ["gender fluid", "transgender", "agender", "female"]
 example_ethnicities = ["german", "nomadic", "underwater demon", "canadian"]
 
-example_genders.length.times do |i|
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-end	
+number_of_santas.times do |i|
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample, rand(1..140))
+ i += 1
+end 
 
-p santas
+ p santas
+
+
+
+
+
