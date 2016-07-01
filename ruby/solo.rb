@@ -1,6 +1,6 @@
-#WRESTLER CLASS
+# WRESTLER CLASS
 
-#PSEUDOCODE
+# PSEUDOCODE
 
 # Create the class Wreslter
 # Input the name of the class
@@ -24,17 +24,24 @@ class Wrestler
   	@height = height
   	@weight = weight
   	@fighting_out_of = fighting_out_of
-  	puts "Initializing a new Wrestler!"
+  	puts "A new competitor enters the ring!"
   end
   
   def powerbomb
   	puts "#{name} with a BRUTAL powerbomb!"
   end
   
-  def finisher(move_name)
+  def finisher(finisher)
   	@finisher = finisher
-  	puts "{name} with a three count after the devestating #{finisher}"
+  	puts "#{name} with a three count after the devestating #{finisher}!"
   end	
 
 end
 
+
+# DRIVER CODE
+
+wrestler = Wrestler.new("Test", "6'1", 205, "Boston, Massachussetts")
+wrestler.powerbomb
+wrestler.finisher("people's elbow")
+p wrestler
