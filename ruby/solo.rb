@@ -23,6 +23,7 @@ class Wrestler
   	@name = name
   	@height = height
   	@weight = weight
+  	@fighting_out_of = fighting_out_of
   	puts "Initializing a new Wrestler!"
   end
   
