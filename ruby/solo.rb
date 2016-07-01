@@ -19,7 +19,7 @@ class Wrestler
   attr_reader :name, :height, :weight
   attr_accessor :finisher
 
-  def initialize(name, height, weight)
+  def initialize(name, height, weight, fighting_out_of)
   	@name = name
   	@height = height
   	@weight = weight
@@ -37,3 +37,4 @@ class Wrestler
   end	
 
 end
+
